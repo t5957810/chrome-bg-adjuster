@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隱私權政策 - 背景色調整器 | Privacy Policy - Background Color Adjuster</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 760px;
+      margin: 48px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #4f8ef7, #6c63ff);
+      padding: 36px 40px;
+      color: white;
+    }
+    .header h1 { font-size: 24px; font-weight: 700; }
+    .header p  { font-size: 14px; opacity: 0.85; margin-top: 6px; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    .content { padding: 36px 40px; }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .lang-btn {
+      padding: 5px 16px;
+      border: 1.5px solid #4f8ef7;
+      border-radius: 20px;
+      background: white;
+      color: #4f8ef7;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: 0.15s;
+    }
+    .lang-btn.active { background: #4f8ef7; color: white; }
+
+    section { margin-bottom: 32px; }
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e40af;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e0eaff;
+      margin-bottom: 14px;
+    }
+    p { font-size: 14px; color: #374151; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    ul li { font-size: 14px; color: #374151; margin-bottom: 6px; }
+    ul li::marker { color: #4f8ef7; }
+
+    .highlight-box {
+      background: #f0f7ff;
+      border-left: 4px solid #4f8ef7;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #1e3a5f;
+    }
+    .footer-note {
+      margin-top: 8px;
+      padding-top: 24px;
+      border-top: 1px solid #f0f0f0;
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    /* 語言切換 */
+    .lang-zh .en-section { display: none; }
+    .lang-en .zh-section { display: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🎨 背景色調整器</h1>
+    <p>Background Color Adjuster — Chrome Extension</p>
+    <span class="badge">Privacy Policy · 隱私權政策</span>
+  </div>
+
+  <div class="content" id="main-content">
+    <div class="lang-switch">
+      <button class="lang-btn active" onclick="setLang('zh')">繁體中文</button>
+      <button class="lang-btn"        onclick="setLang('en')">English</button>
+    </div>
+
+    <!-- ══ 繁體中文 ══ -->
+    <div class="zh-section">
+
+      <section>
+        <h2>📋 概述</h2>
+        <p>本隱私權政策說明「背景色調整器」Chrome 擴充功能（以下簡稱「本擴充功能」）如何處理使用者資訊。</p>
+        <p>本擴充功能由個人開發者維護，<strong>不以任何形式收集、儲存或傳送使用者的個人資料</strong>。</p>
+        <div class="highlight-box">
+          最後更新日期：2026 年 2 月 24 日
+        </div>
+      </section>
+
+      <section>
+        <h2>🔒 資料收集</h2>
+        <p>本擴充功能<strong>不收集以下任何資訊</strong>：</p>
+        <ul>
+          <li>個人身份資訊（姓名、電子郵件、IP 位址等）</li>
+          <li>瀏覽歷史或網頁內容</li>
+          <li>使用行為分析資料</li>
+          <li>裝置資訊</li>
+          <li>任何形式的遙測或診斷資料</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💾 本地儲存</h2>
+        <p>本擴充功能僅使用 <code>chrome.storage.local</code> 將以下設定儲存於<strong>使用者本機裝置</strong>：</p>
+        <ul>
+          <li>各網站的啟用 / 停用狀態</li>
+          <li>使用者選擇的調色模式（自動反轉 / 自訂顏色）</li>
+          <li>自訂的背景色、文字色、連結色偏好</li>
+        </ul>
+        <p>這些資料<strong>不會離開使用者的裝置</strong>，不會上傳至任何伺服器或第三方服務。</p>
+      </section>
+
+      <section>
+        <h2>🌐 權限說明</h2>
+        <ul>
+          <li><strong>activeTab</strong>：僅在使用者點擊擴充功能圖示時，取得當前分頁的網域名稱，用於顯示目前設定狀態。</li>
+          <li><strong>storage</strong>：將使用者的顏色偏好設定儲存於本機，以便下次造訪同一網站時自動套用。</li>
+          <li><strong>scripting</strong>：將 CSS 樣式注入網頁，實現背景色與文字色的視覺調整。不讀取網頁內容。</li>
+          <li><strong>所有網址存取</strong>：因使用者可在任意網站使用本功能，無法事先限定特定網域。預設對所有網站均為關閉狀態，需使用者手動逐一開啟。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🤝 第三方服務</h2>
+        <p>本擴充功能<strong>不使用任何第三方分析工具、廣告服務或追蹤程式碼</strong>，例如 Google Analytics、Firebase 等。</p>
+      </section>
+
+      <section>
+        <h2>👶 兒童隱私</h2>
+        <p>本擴充功能不針對 13 歲以下兒童，且不收集任何使用者資料，因此不存在兒童資料保護問題。</p>
+      </section>
+
+      <section>
+        <h2>✉️ 聯絡方式</h2>
+        <p>如對本隱私權政策有任何疑問，請透過 Chrome Web Store 擴充功能頁面的支援連結與開發者聯絡。</p>
+      </section>
+
+    </div><!-- /zh-section -->
+
+    <!-- ══ English ══ -->
+    <div class="en-section" style="display:none">
+
+      <section>
+        <h2>📋 Overview</h2>
+        <p>This Privacy Policy describes how the "Background Color Adjuster" Chrome Extension (hereinafter "the Extension") handles user information.</p>
+        <p>The Extension is maintained by an individual developer and <strong>does not collect, store, or transmit any personal user data in any form</strong>.</p>
+        <div class="highlight-box">
+          Last updated: February 24, 2026
+        </div>
+      </section>
+
+      <section>
+        <h2>🔒 Data Collection</h2>
+        <p>The Extension <strong>does not collect any of the following</strong>:</p>
+        <ul>
+          <li>Personally identifiable information (name, email, IP address, etc.)</li>
+          <li>Browsing history or webpage content</li>
+          <li>Usage behavior analytics</li>
+          <li>Device information</li>
+          <li>Any form of telemetry or diagnostic data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>💾 Local Storage</h2>
+        <p>The Extension only uses <code>chrome.storage.local</code> to store the following settings on the <strong>user's local device</strong>:</p>
+        <ul>
+          <li>Per-site enabled/disabled state</li>
+          <li>Selected color mode (auto-invert / custom colors)</li>
+          <li>Custom background color, text color, and link color preferences</li>
+        </ul>
+        <p>This data <strong>never leaves the user's device</strong> and is never uploaded to any server or third-party service.</p>
+      </section>
+
+      <section>
+        <h2>🌐 Permissions Justification</h2>
+        <ul>
+          <li><strong>activeTab</strong>: Only used when the user clicks the extension icon to read the current tab's origin, in order to display the current setting status.</li>
+          <li><strong>storage</strong>: Saves the user's color preferences locally so they are automatically applied on future visits to the same site.</li>
+          <li><strong>scripting</strong>: Injects CSS styles into the page to adjust background and text colors visually. Does not read page content.</li>
+          <li><strong>All URLs access</strong>: Since users may wish to use this feature on any website, it is not possible to pre-specify domains. The extension is disabled for all sites by default and must be manually enabled per site by the user.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🤝 Third-Party Services</h2>
+        <p>The Extension <strong>does not use any third-party analytics, advertising services, or tracking code</strong> such as Google Analytics or Firebase.</p>
+      </section>
+
+      <section>
+        <h2>👶 Children's Privacy</h2>
+        <p>The Extension is not directed at children under 13 and does not collect any user data, so there are no children's data protection concerns.</p>
+      </section>
+
+      <section>
+        <h2>✉️ Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please contact the developer via the support link on the Chrome Web Store extension page.</p>
+      </section>
+
+    </div><!-- /en-section -->
+
+    <div class="footer-note">
+      Background Color Adjuster · Chrome Extension · Privacy Policy
+    </div>
+  </div>
+</div>
+
+<script>
+  function setLang(lang) {
+    const zh = document.querySelector('.zh-section');
+    const en = document.querySelector('.en-section');
+    const btns = document.querySelectorAll('.lang-btn');
+    if (lang === 'zh') {
+      zh.style.display = 'block';
+      en.style.display = 'none';
+    } else {
+      zh.style.display = 'none';
+      en.style.display = 'block';
+    }
+    btns.forEach(b => b.classList.toggle('active', b.textContent.includes(lang === 'zh' ? '中文' : 'English')));
+  }
+</script>
+</body>
+</html>
